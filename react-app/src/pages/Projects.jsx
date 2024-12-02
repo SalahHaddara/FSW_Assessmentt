@@ -1,17 +1,9 @@
 import React from "react";
 import Project from "../components/Project";
+import {useProjects} from "../context/ProjectsContext";
 
 const Projects = () => {
-    const projects = [
-        {
-            id: 1,
-            title: "Project 1",
-        },
-        {
-            id: 2,
-            title: "Project 2",
-        }
-    ];
+    const {projects} = useProjects();
 
     return (
         <div className="projects-container">
