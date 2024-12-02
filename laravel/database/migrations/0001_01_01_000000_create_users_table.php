@@ -14,7 +14,7 @@ return new class extends Migration {
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
-            $password->string("password");
+            $table->string("password");
             $table->timestamps();
             $table->string('name');
             $table->integer('requests_num')->default(0);
