@@ -21,7 +21,15 @@ class ProjectController extends Controller
      */
     public function store(Request $request)
     {
+        $project = new Project;
+        $project->name = $request->name;
+        $project->description = $request->description;
+        $project->save();
 
+        return response()->json([
+            'message' => 'Project created',
+            'project' => $project
+        ]);
     }
 
     /**
